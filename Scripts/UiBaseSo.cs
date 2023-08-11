@@ -44,7 +44,7 @@ namespace UI.UiFactorySystem.Scripts
             {
                 uiBaseSo = CreateInstance<UiBaseSo>();
                 uiBaseSo.name = "UiBaseSo";
-                AssetDatabase.CreateAsset(uiBaseSo, "Assets/Scripts/UI/UiFactorySystem/UiBaseSo.asset");
+                AssetDatabase.CreateAsset(uiBaseSo, "Assets/UiBaseSo.asset");
                 AssetDatabase.SaveAssets();
             }
             else
