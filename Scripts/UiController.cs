@@ -15,7 +15,7 @@ namespace UI.UiFactorySystem.Scripts
         private CanvasGroup _canvasGroup;
         private Sequence _seq;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
         }
