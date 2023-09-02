@@ -84,5 +84,9 @@ namespace UI.UiFactorySystem.Scripts
         }
 
 #endif
+        public void Initialize()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
