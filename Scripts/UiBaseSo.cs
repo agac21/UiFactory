@@ -36,23 +36,12 @@ namespace UI.UiFactorySystem.Scripts
             AssetDatabase.SaveAssets();
         }
 
-        public static UiBaseSo GetOrCreateBaseSo()
+        public static UiBaseSo CreateBaseSo()
         {
-            UiBaseSo uiBaseSo;
-            var guids = AssetDatabase.FindAssets("t:UiBaseSo");
-            if (guids.Length == 0)
-            {
-                uiBaseSo = CreateInstance<UiBaseSo>();
-                uiBaseSo.name = "UiBaseSo";
-                AssetDatabase.CreateAsset(uiBaseSo, "Assets/UiBaseSo.asset");
-                AssetDatabase.SaveAssets();
-            }
-            else
-            {
-                var path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                uiBaseSo = AssetDatabase.LoadAssetAtPath<UiBaseSo>(path);
-            }
-
+            var uiBaseSo = CreateInstance<UiBaseSo>();
+            uiBaseSo.name = "UiBaseSo";
+            AssetDatabase.CreateAsset(uiBaseSo, "Assets/UiBaseSo.asset");
+            AssetDatabase.SaveAssets();
             return uiBaseSo;
         }
 
