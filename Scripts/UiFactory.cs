@@ -12,9 +12,12 @@ namespace UI.UiFactorySystem.Scripts
 
         private readonly List<UiController> _sceneUis = new();
 
-        private void Awake()
+        
+        public void Initialize()
         {
+            // Debug.LogError("UiFactory -- NotImplementedException: The method or operation is not implemented.");
             CacheScene();
+            DontDestroyOnLoad(gameObject);
         }
 
         private void CacheScene()
@@ -83,9 +86,5 @@ namespace UI.UiFactorySystem.Scripts
         }
 
 #endif
-        public void Initialize()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
