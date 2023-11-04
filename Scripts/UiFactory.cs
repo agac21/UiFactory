@@ -7,7 +7,11 @@ namespace UI.UiFactorySystem.Scripts
     public class UiFactory : MonoSingleton<UiFactory>
     {
         [SerializeField] private UiHub m_uiHub;
+
+#if UNITY_EDITOR
         public UiBaseSo BaseSo => m_uiHub.BaseSo;
+
+#endif
 
         public void Initialize()
         {
